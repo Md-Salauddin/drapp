@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_doctor_app/constants.dart';
 
+import '../components/grid_menu.dart';
 import '../components/home_screen_nav_bar.dart';
+import '../components/top_dr.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -65,6 +67,32 @@ class HomeScreen extends StatelessWidget {
                         border: InputBorder.none),
                   ),
                 ),
+                const SizedBox(
+                  height: 24,
+                ),
+                const GridMenu(),
+                const SizedBox(
+                  height: 24,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Top Doctors",
+                      style: Theme.of(context).textTheme.headline3,
+                    ),
+                    Text(
+                      "View all",
+                      style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                        color: kBlueColor
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                //TopDr(),
               ],
             ),
             padding: const EdgeInsets.all(16),
@@ -73,5 +101,5 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-  // git added
+// git added
 }
